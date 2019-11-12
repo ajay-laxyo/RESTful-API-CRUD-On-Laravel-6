@@ -26,3 +26,7 @@ Route::get('studentsdata/{id}','ApiController@showbyid');
 Route::put('studentsupdate/{id}','ApiController@update');
 
 Route::delete('studentsdelete/{id}','ApiController@delete');
+
+Route::post('register','RegisterController@register');
+
+Route::post('login','LoginController@login');
