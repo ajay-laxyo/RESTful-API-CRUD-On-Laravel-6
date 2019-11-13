@@ -27,6 +27,9 @@ Route::put('studentsupdate/{id}','ApiController@update');
 
 Route::delete('studentsdelete/{id}','ApiController@delete');
 
-Route::post('register','RegisterController@register');
+// Route::post('register','RegisterController@register');
 
-Route::post('login','LoginController@login');
+// Route::post('login','LoginController@login');
+
+Route::post('login', 'UserController@login');
+Route::post('register', 'UserController@register');
