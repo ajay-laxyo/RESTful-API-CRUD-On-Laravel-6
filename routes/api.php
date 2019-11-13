@@ -17,19 +17,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/students','ApiController@store');
+Route::resource('students', 'ApiStudentController');
 
-Route::get('/studentsdata','ApiController@show');
+// Route::post('/students','ApiController@store');
 
-Route::get('studentsdata/{id}','ApiController@showbyid');
+// Route::get('/studentsdata','ApiController@show');
 
-Route::put('studentsupdate/{id}','ApiController@update');
+// Route::get('studentsdata/{id}','ApiController@showbyid');
 
-Route::delete('studentsdelete/{id}','ApiController@delete');
+// Route::put('studentsupdate/{id}','ApiController@update');
 
-// Route::post('register','RegisterController@register');
+// Route::delete('studentsdelete/{id}','ApiController@delete');
 
-// Route::post('login','LoginController@login');
 
 Route::post('login', 'UserController@login');
 Route::post('register', 'UserController@register');
